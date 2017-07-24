@@ -2,12 +2,12 @@
  * Editor.md
  *
  * @file        editormd.js 
- * @version     v1.5.0 
+ * @version     v1.5.1 
  * @description Open source online markdown editor.
  * @license     MIT License
- * @author      Pandao
- * {@link       https://github.com/pandao/editor.md}
- * @updateTime  2015-06-09
+ * @author      Pandao,Vin-Yang
+ * {@link       https://github.com/Vin-Yang/editor.md}
+ * @updateTime  2017-07-24
  */
 
 ;(function(factory) {
@@ -2628,11 +2628,16 @@
                 state.fullscreen = true;
 
                 $("html,body").css("overflow", "hidden");
-                
+
                 editor.css({
                     width    : $(window).width(),
-                    height   : $(window).height()
+                    height   : $(window).height(),
+                    "z-index": "99999"
                 }).addClass(fullscreenClass);
+
+                editor.after('<div id="'+ editor.attr("id") +'-brother"></div>');
+
+                $("body").append(editor);
 
                 this.resize();
     
@@ -2671,10 +2676,12 @@
 
             $("html,body").css("overflow", "");
 
-            editor.css({
+            editor.removeAttr("style").css({
                 width    : editor.data("oldWidth"),
                 height   : editor.data("oldHeight")
             }).removeClass(fullscreenClass);
+
+            $("#" + editor.attr("id") + "-brother").before(editor).remove();
 
             this.resize();
             

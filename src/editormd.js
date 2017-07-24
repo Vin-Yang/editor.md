@@ -2616,11 +2616,16 @@
                 state.fullscreen = true;
 
                 $("html,body").css("overflow", "hidden");
-                
+
                 editor.css({
                     width    : $(window).width(),
-                    height   : $(window).height()
+                    height   : $(window).height(),
+                    "z-index": "99999"
                 }).addClass(fullscreenClass);
+
+                editor.after('<div id="'+ editor.attr("id") +'-brother"></div>');
+
+                $("body").append(editor);
 
                 this.resize();
     
@@ -2659,10 +2664,12 @@
 
             $("html,body").css("overflow", "");
 
-            editor.css({
+            editor.removeAttr("style").css({
                 width    : editor.data("oldWidth"),
                 height   : editor.data("oldHeight")
             }).removeClass(fullscreenClass);
+
+            $("#" + editor.attr("id") + "-brother").before(editor).remove();
 
             this.resize();
             

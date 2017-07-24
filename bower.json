@@ -1,15 +1,17 @@
 {
-  "name": "editor.md",
-  "version": "1.5.0",
-  "homepage": "https://github.com/pandao/editor.md",
+  "name": "vin.editor.md",
+  "version": "1.5.1",
+  "homepage": "https://github.com/Vin-Yang/editor.md",
   "authors": [
-    "Pandao <pandao@vip.qq.com>"
+    "Pandao <pandao@vip.qq.com>",
+    "Vin-Yang <yangwenpeng1314521@gmail.com>"
   ],
   "description": "Open source online markdown editor.",
   "keywords": [
     "editor.md",
     "markdown",
-    "editor"
+    "editor",
+    "vin.editor.md"
   ],
   "license": "MIT",
   "ignore": [

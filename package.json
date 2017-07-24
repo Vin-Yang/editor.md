@@ -1,6 +1,6 @@
 {
-  "name": "editor.md",
-  "version": "1.5.0",
+  "name": "vin.editor.md",
+  "version": "1.5.1",
   "description": "Open source online markdown editor.",
   "directories": {
     "doc": "docs",
@@ -12,19 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pandao/editor.md.git"
+    "url": "https://github.com/Vin-Yang/editor.md"
   },
   "keywords": [
     "editor.md",
     "markdown",
-    "editor"
+    "editor",
+    "vin.editor.md"
   ],
-  "author": "Pandao",
+  "author": "Pandao,Vin-Yang",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pandao/editor.md/issues"
   },
-  "homepage": "https://github.com/pandao/editor.md",
+  "homepage": "https://github.com/Vin-Yang/editor.md",
   "devDependencies": {
     "dateformatter": "^0.1.0",
     "gulp": "^3.8.11",
